@@ -5,10 +5,10 @@ from .exceptions import FutError
 # config
 rc = requests.get(
     'https://www.ea.com/fifa/ultimate-team/web-app/config/config.json').json()
-auth_url = rc['authURL']
+auth_url = rc['utasAuthHost']
 pin_url = rc['pinURL']  # TODO: urls in dict?
 client_id = rc['eadpClientId']
-release_type = rc['releaseType']
+release_type = rc['eadpReleaseType']
 fun_captcha_public_key = rc['funCaptchaPublicKey']
 
 
